@@ -1,0 +1,22 @@
+{
+  "name": "polling-system-api",
+  "version": "1.0.0",
+  "description": "polling-system-api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prajwakene/polling-system-api.git"
+  },
+  "author": "\"Prajwal Kene\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Prajwakene/polling-system-api/issues"
+  },
+  "homepage": "https://github.com/Prajwakene/polling-system-api#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
