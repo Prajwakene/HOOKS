@@ -51,7 +51,7 @@ class MovieCard extends React.Component{;
                      onClick={() => {toggleFav(movies)}}>{fav?"Unfavourite":"Favourite"}</button>
 
                     <button className={cart?"cart-btn":"remove-from-cart"}
-                      onClick={() => {toggleCart;(movies)}}>{cart?"Add to cart":"Move to wishlist"}</button>
+                      onClick={() => {toggleCart(movies)}}>{cart?"Add to cart":"Move to wishlist"}</button>
 
                     </div>
                     

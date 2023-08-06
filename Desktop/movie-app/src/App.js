@@ -4,7 +4,7 @@ function App() {
   return (
     //empty fragments
     <>
-    <h1>Movie App</h1>
+    
     <Navbar />
     <MovieList />
     </>

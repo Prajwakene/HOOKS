@@ -149,7 +149,8 @@ class MovieList extends Component{
                                    addStars= {this.handleIncStar} 
                                    decStars= {this.handleDecStar}
                                    toggleFav= {this.handleToggleFav}
-                                   toggleCart ={this.handleToggleCart}/>)}
+                                   toggleCart ={this.handleToggleCart}
+                                    key = {movie.id} />)}
 
             
            
