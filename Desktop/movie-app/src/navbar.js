@@ -1,60 +1,41 @@
-import React from "react";
+// import React, { Component } from "react";
 
-class Navbar extends React.Component {
-  render() {
+import styles from "./Navbar.module.css";
+
+// class Navbar extends Component {
+  function Navbar(props){
+  
+    const {cartCount} = props;
     return (
       <>
-        <div style={styles.nav}>
-          <div style={styles.title}>Movie App</div>
-          <div style={styles.cartContainer}>
-            <img alt="ucart-icon" src="https://cdn-icons-png.flaticon.com/128/833/833314.png" style={styles.cartIcon}/>
-            <span style={styles.cartCount}>0</span>
+        <div className={styles.nav}>
+          <div className={styles.title}>MOVIE-APP</div>
+          <div className={styles.cartIconContainer}>
+            <img
+              className={styles.cartIcon}
+              src="https://cdn-icons-png.flaticon.com/128/1077/1077035.png"
+              alt="cart-icon"
+            />
+            {/* <span className={styles.cartCount}>
+              <strong>{cartCount}</strong>
+            </span> */}
+            <img
+              className={styles.cartIcon}
+              src="https://cdn-icons-png.flaticon.com/128/2989/2989907.png"
+              alt="cart-icon"
+            />
+            <img
+              className={styles.cartIcon}
+              src="https://cdn-icons-png.flaticon.com/128/1170/1170678.png"
+              alt="cart-icon"
+            />
+            <span className={styles.cartCount}>
+              <strong>{cartCount}</strong>
+            </span>
           </div>
         </div>
       </>
     );
   }
-}
 
 export default Navbar;
-
-// css object
-const styles = {
-  nav: {
-    width: "100",
-    height: 70,
-    background: "lightblue",
-    display: "flex",
-    justifyContent: "space-between",
-    padding:"relative"
-
-  },
-  title:{
-    fontSize:30,
-    color:'black',
-    fontWeight:600,
-    fontFamily:'"Montserrat",sans-serif',
-    textTrasform:"uppercase",
-    marginLeft:20,
-    paddingLeft:20
-  },
-  cartContainer:{
-    position:"relative",
-    cursor:"pointer",
-  },
-  cartIcon:{
-    height:48,
-    marginRight:20
-  },
-  cartCount:{
-    background:"purple",
-    color:"#fff",
-    bordeeRadius:"50%",
-    padding:"4px 8px",
-    position:"absolute",
-    right:10,
-    top:-5,
-    fontSize:12
-
-  }
-};

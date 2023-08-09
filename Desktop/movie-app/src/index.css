@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #f1f1f1;
+  background: linear-gradient(360deg,var(--text-color),var(--bg-color)) ;
 }
 .main {
   width: 70%;
@@ -105,28 +105,30 @@ footer.starCount {
  
 }
 .favourite-btn {
-  background-color: goldenrod;
+  /* background: linear-gradient(170deg, rgb(19, 18, 19) ,#0550e4) ; */
   color: #fff;
   margin: 5px;
 }
 .unfavourite-btn {
-  background-color: purple;
+  /* background: linear-gradient(170deg,#070808, purple) ; */
   color: #fff;
   text-shadow: none;
   margin: 5px;
 }
 .cart-btn{
-  
-      background-color: purple;
+  /* background: linear-gradient(170deg, purple ,#111213) ; */
       color: #fff;
       margin: 5px;
     
 }
 .remove-from-cart{
-  background-color: goldenrod;
+      /* background: linear-gradient(170deg, rgb(19, 18, 19) ,#0550e4) ; */
       color: #fff;
       margin: 5px;
     
+}
+.movie-card:hover{
+ background-color :var(--text-color);
 }
 /* .nav {
   width: 100%;
@@ -138,3 +140,54 @@ footer.starCount {
   margin: 100px;
 
 } */
+ .btn-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 15rem;
+  height: 2rem;
+
+}
+.btn-box #btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 100%;
+  background: var(--main-color);
+  border: 0.1rem solid var(--main-color);
+  border-radius: 0.8rem;
+  font-size: .8rem;
+  font-weight: 10;
+  letter-spacing: 0.1rem;
+  color: black;
+  z-index: 1;
+  overflow:hidden;
+  transition: 0.5s;
+
+}
+.btn-box #btn:nth-child(2) {
+  background: var(--text-color);
+}
+.btn-box #btn:nth-child(2):hover {
+  background: var(--text-color);
+}
+.btn-box #btn:nth-child(2)::before {
+  background: var(--main-color);
+}
+
+.btn-box #btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--text-color);
+  z-index: -1;
+  transition: 0.8s;
+}
+.btn-box #btn:hover::before {
+  width: 100%;
+} 
